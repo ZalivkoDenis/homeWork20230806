@@ -4,7 +4,7 @@ from abc import ABC
 
 class Animal(ABC):
     """
-    Базовый класс для животных
+    Базовый (абстрактный) класс для животных
     """
 
     def __init__(self, name: str, color: str = None):
