@@ -1,7 +1,8 @@
 from abc import abstractmethod
+from abc import ABC
 
 
-class Animal:
+class Animal(ABC):
     """
     Базовый класс для животных
     """
