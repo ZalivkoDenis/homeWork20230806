@@ -6,9 +6,9 @@ class Animal:
     Базовый класс для животных
     """
 
-    def __init__(self, name: str):
+    def __init__(self, name: str, color: str = None):
         self.name = name
-        self._animal_type = 'Animal'
+        self.color = color
 
     @property
     def name(self):
@@ -21,7 +21,17 @@ class Animal:
     def name(self, name):
         self._name = name
 
-    animal_type = property(fget=lambda self: self._animal_type)
+    @property
+    def color(self) -> str:
+        return self._color
+
+    @color.setter
+    def color(self, color: str):
+        self._color = color
+
+    @property
+    @abstractmethod
+    def animal_type(self) -> str: return "Animal"
 
     @abstractmethod
     def do_voice(self) -> str:
@@ -29,7 +39,8 @@ class Animal:
         Animal voice-to-text converter.
         :return: Animal voice!
         """
-        pass
+        return ""
 
     def __str__(self):
-        return f'Type: {self.animal_type} Name: {self.name}'
+        return (f'Type: {self.animal_type} Name: {self.name} '
+                f'Color: {"not implement" if self.color is None else self.color}')

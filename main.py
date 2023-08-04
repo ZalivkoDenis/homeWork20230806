@@ -10,6 +10,6 @@ from class_cat import Cat
 from class_dog import Dog
 
 if __name__ == "__main__":
-    animals: list[Animal] = [Cat("Мурзик"), Dog("Мухтар"), Cat("Васька"), Animal('Unknown Animal')]
+    animals: list[Animal] = [Cat("Мурзик", "Рыжий"), Dog("Мухтар"), Cat("Васька", "Полосатый"), Animal('Unknown Animal')]
     for item in animals:
         print(item, 'Say:', item.do_voice())
