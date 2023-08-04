@@ -10,5 +10,5 @@ class Dog(Animal):
     def animal_type(self) -> str: return "Dog"
 
     def do_voice(self):
-        return "Say uafffff! I'm dog!"
+        return "гав"
 

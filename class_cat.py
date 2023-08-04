@@ -10,4 +10,4 @@ class Cat(Animal):
     def animal_type(self) -> str: return "Cat"
 
     def do_voice(self):
-        return "Say miauuuu! I'm cat!"
+        return "мяу"
